@@ -2,18 +2,13 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-
 app.use(express.json());
-
 
 let clientes = [];
 let pedidos = [];
 let restaurantes = [];
 let entregadores = [];
 let pratos = [];
-
-
-
 
 app.post('/clientes', (req, res) => {
     const { nome, telefone, endereco } = req.body;
@@ -89,5 +84,3 @@ app.get('/pedidos', (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
-
-
